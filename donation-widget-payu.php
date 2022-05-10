@@ -2,13 +2,13 @@
 /**
  * The plugin bootstrap file.
  *
- * @link              https://github.com/fedek6/payu-donation-widget-wp
+ * @link              https://github.com/fedek6/donation-widget-payu
  * @since             1.0.0
  * @package           wp_modern_plugin_boilerplate
  *
  * @wordpress-plugin
  * Plugin Name:       Donation widget via PayU
- * Plugin URI:        https://github.com/fedek6/payu-donation-widget-wp
+ * Plugin URI:        https://github.com/fedek6/donation-widget-payu
  * Requires PHP:      7.4
  * Requires at least: 5.2
  * Tested up to:      5.2

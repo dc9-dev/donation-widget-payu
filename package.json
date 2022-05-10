@@ -1,5 +1,5 @@
 {
-  "name": "wp-modern-plugin-boilerplate",
+  "name": "donation-widget-payu",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fedek6/wp-modern-plugin-boilerplate.git"
+    "url": "git+https://github.com/fedek6/donation-widget-payu.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/fedek6/wp-modern-plugin-boilerplate/issues"
+    "url": "https://github.com/fedek6/donation-widget-payu/issues"
   },
-  "homepage": "https://github.com/fedek6/wp-modern-plugin-boilerplate#readme",
+  "homepage": "https://github.com/fedek6/donation-widget-payu",
   "devDependencies": {
     "@babel/core": "^7.13.16",
     "@babel/preset-env": "^7.13.15",

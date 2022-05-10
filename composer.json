@@ -1,6 +1,6 @@
 {
-  "name": "fedek6/wp-payu-donation-widget",
-  "description": "Very simple donation widget (using PayU)",
+  "name": "edek6/donation-widget-payu",
+  "description": "Very simple donation widget for WordPress (using PayU)",
   "type": "metapackage",
   "license": "MIT",
   "authors": [
