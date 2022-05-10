@@ -1,0 +1,42 @@
+{
+  "name": "wp-modern-plugin-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "assets": "grunt",
+    "format": "prettier --write \"src/{backend,frontend}/**/*.{ts,js,scss}\"",
+    "lint": "eslint \"src/{backend,frontend}/js/**/*.{ts,js}\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fedek6/wp-modern-plugin-boilerplate.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fedek6/wp-modern-plugin-boilerplate/issues"
+  },
+  "homepage": "https://github.com/fedek6/wp-modern-plugin-boilerplate#readme",
+  "devDependencies": {
+    "@babel/core": "^7.13.16",
+    "@babel/preset-env": "^7.13.15",
+    "@typescript-eslint/eslint-plugin": "^4.22.0",
+    "babelify": "^10.0.0",
+    "eslint": "^7.24.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-airbnb-typescript": "^12.3.1",
+    "eslint-config-prettier": "^8.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.4.0",
+    "grunt": "^1.3.0",
+    "grunt-browserify": "^6.0.0",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-sass": "^2.0.0",
+    "grunt-contrib-uglify": "^5.1.0",
+    "prettier": "^2.2.1",
+    "tsify": "^5.0.2",
+    "typescript": "^4.2.4"
+  }
+}

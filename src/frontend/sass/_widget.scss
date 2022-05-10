@@ -1,0 +1,204 @@
+.donation-widget {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px 10px;
+  max-width: var(--max-widget-width, "auto");
+
+  &__amount {
+    border: solid 2px var(--primary-color);
+    box-sizing: border-box;
+    position: relative;
+    grid-column-start: span 1;
+
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+    font-size: var(--fixed-amount-font-size);
+
+    input {
+      max-width: 30%;
+    }
+
+    label {
+      // max-width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: var(--button-height);
+      margin: 0 0;
+      padding: 0 0;
+      cursor: pointer;
+    }
+
+    &.-fixed {
+      transition: var(--transition);
+
+      input {
+        position: absolute;
+        opacity: 0;
+      }
+
+      label {
+        user-select: none;
+      }
+
+      input:checked + label {
+        background-color: var(--primary-color);
+        transition: var(--transition);
+        color: var(--text-color-on-focus);
+      }
+      input:focus + label {
+        color: var(--text-color-on-focus);
+        transition: var(--transition);
+        box-shadow: 0px 0px 6px 4px var(--outline-color);
+      }
+
+      &:hover {
+        box-shadow: 0px 0px 4px 0px var(--primary-color) inset;
+      }
+    }
+
+    &.-active {
+      label {
+        background-color: var(--primary-color);
+        transition: var(--transition);
+      }
+    }
+
+    &.-custom {
+      font-size: var(--custom-amount-font-size);
+
+      label:focus-within {
+        box-shadow: 0px 0px 6px 2px var(--outline-color);
+        color: var(--text-color-on-focus);
+      }
+
+      input {
+        max-width: 50px;
+        border: none;
+        border-bottom: solid 2px var(--secondary-color);
+        border-radius: 0;
+        background-color: transparent;
+        line-height: 100%;
+        padding: 0 0;
+        text-align: center;
+
+        height: 20px;
+        min-height: auto;
+        display: inline-block;
+
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: textfield;
+
+        &:focus {
+          color: var(--text-color-on-focus);
+          border-bottom-color: var(--text-color-on-focus);
+        }
+      }
+
+      &.-active {
+        input {
+          color: var(--text-color-on-focus);
+          border-bottom-color: var(--text-color-on-focus);
+        }
+
+        label {
+          color: var(--text-color-on-focus);
+        }
+      }
+    }
+  }
+
+  &__error {
+    grid-column-start: span 3;
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+    transition: var(--transition);
+    font-size: var(--btn-font-size);
+    color: var(--secondary-color);
+
+    &[aria-hidden="true"] {
+      opacity: 0;
+    }
+  }
+
+  &__submit {
+    grid-column-start: span 2;
+
+    button[type="submit"] {
+      height: calc(var(--button-height) + 2 * 2px);
+      width: 100%;
+      border: none;
+      background-color: var(--primary-color);
+      cursor: pointer;
+      transition: var(--transition);
+      color: var(--text-color-on-focus);
+      position: relative;
+
+      font-family: var(--font-family);
+      font-weight: var(--font-weight);
+      font-size: var(--btn-font-size);
+
+      -moz-appearance: none;
+      -webkit-appearance: none;
+
+      span {
+        pointer-events: none;
+        opacity: 1;
+        transition: var(--transition);
+      }
+
+      &:focus {
+        background: var(--primary-color-300);
+        box-shadow: 0px 0px 6px 2px var(--outline-color);
+        outline: none;
+      }
+
+      &:hover {
+        background: var(--primary-color-300);
+      }
+
+      &[disabled],
+      &:disabled {
+        cursor: not-allowed;
+        background: var(--primary-color-300);
+      }
+
+      &[aria-busy="true"] {
+        background: var(--primary-color-300);
+        cursor: not-allowed;
+
+        span {
+          opacity: 0;
+        }
+
+        &::after {
+          content: "❤";
+          display: block;
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          line-height: 20px;
+          left: calc(50% - 10px);
+          top: calc(50% - 10px);
+          animation: pulse 0.5s infinite;
+          transform-origin: center;
+        }
+      }
+    }
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+
+    70% {
+      transform: scale(2);
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  }
+}

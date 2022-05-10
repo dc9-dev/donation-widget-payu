@@ -1,0 +1,25 @@
+{
+  "name": "fedek6/wp-payu-donation-widget",
+  "description": "Very simple donation widget (using PayU)",
+  "type": "metapackage",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Konrad Fedorczyk",
+      "email": "contact@realhe.ro"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "RealHero\\DonationWidgetPayu\\": "plugin"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "RealHero\\DonationWidgetPayu\\Tests\\": "tests"
+    }
+  },
+  "require" : {
+    "openpayu/openpayu" : "2.3.*"
+  }
+}
