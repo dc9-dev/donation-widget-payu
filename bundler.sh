@@ -13,4 +13,7 @@ zip -r "${NAME}.zip" "./${NAME}" -x \
 "./${NAME}/.editorconfig" \
 "./${NAME}/bundle.sh" \
 "./${NAME}/tests/*" \
-"./${NAME}/Gruntfile.js"
+"./${NAME}/Gruntfile.js" \
+"./${NAME}/composer.json" \
+"./${NAME}/composer.lock" \
+"./${NAME}/.github" \
