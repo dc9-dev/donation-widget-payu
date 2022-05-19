@@ -12,7 +12,10 @@
                             $currentValue = get_option('environment');
                             $isSelected = $currentValue == $value ? "selected" : "";
 
-                            echo "<option value='{$value}' {$isSelected}>{$name}</option>";
+                            // Escape values
+                            $escValue = esc_attr($value);
+
+                            echo '<option value="' . esc_attr($value) . "\" {$isSelected}>" . esc_html($name) . '</option>';
                         }
                         ?>
                     </select>
@@ -22,42 +25,42 @@
                 <th><label for="merchantPosId"><?= __("Merchant POS ID", "donation-widget-payu"); ?>:</label></th>
 
                 <td>
-                    <input type='number' class="regular-text" id="merchantPosId" name="merchantPosId" value="<?php echo get_option('merchantPosId'); ?>" autocomplete="off">
+                    <input type='number' class="regular-text" id="merchantPosId" name="merchantPosId" value="<?php esc_attr_e(get_option('merchantPosId')); ?>" autocomplete="off">
                 </td>
             </tr>
             <tr>
                 <th><label for="signatureKey"><?= __("Signature key", "donation-widget-payu"); ?>:</label></th>
 
                 <td>
-                    <input type='text' class="regular-text" id="signatureKey" name="signatureKey" value="<?php echo get_option('signatureKey'); ?>" autocomplete="off">
+                    <input type='text' class="regular-text" id="signatureKey" name="signatureKey" value="<?php esc_attr_e(get_option('signatureKey')); ?>" autocomplete="off">
                 </td>
             </tr>
             <tr>
                 <th><label for="oauthClientId"><?= __("Oauth Client Id", "donation-widget-payu"); ?>:</label></th>
 
                 <td>
-                    <input type='password' class="regular-text" id="oauthClientId" name="oauthClientId" value="<?php echo get_option('oauthClientId'); ?>" autocomplete="off">
+                    <input type='password' class="regular-text" id="oauthClientId" name="oauthClientId" value="<?php esc_attr_e(get_option('oauthClientId')); ?>" autocomplete="off">
                 </td>
             </tr>
             <tr>
                 <th><label for="oauthClientSecret"><?= __("Oauth Client Secret", "donation-widget-payu"); ?>:</label></th>
 
                 <td>
-                    <input type='password' class="regular-text" id="oauthClientSecret" name="oauthClientSecret" value="<?php echo get_option('oauthClientSecret'); ?>" autocomplete="off">
+                    <input type='password' class="regular-text" id="oauthClientSecret" name="oauthClientSecret" value="<?php esc_attr_e(get_option('oauthClientSecret')); ?>" autocomplete="off">
                 </td>
             </tr>
             <tr>
                 <th><label for="continueUrl"><?= __("Redirect path after payment", "donation-widget-payu"); ?>:</label></th>
 
                 <td>
-                    <input type='text' class="regular-text" id="continueUrl" name="continueUrl" value="<?php echo get_option('continueUrl'); ?>" autocomplete="off">
+                    <input type='text' class="regular-text" id="continueUrl" name="continueUrl" value="<?php esc_attr_e(get_option('continueUrl')); ?>" autocomplete="off">
                 </td>
             </tr>
             <tr>
                 <th><label for="continueUrl"><?= __("Transfer description", "donation-widget-payu"); ?>:</label></th>
 
                 <td>
-                    <input type='text' class="regular-text" id="transferDescription" name="transferDescription" value="<?php echo get_option('transferDescription'); ?>" autocomplete="off">
+                    <input type='text' class="regular-text" id="transferDescription" name="transferDescription" value="<?php esc_attr_e(get_option('transferDescription')); ?>" autocomplete="off">
                 </td>
             </tr>
         </table>

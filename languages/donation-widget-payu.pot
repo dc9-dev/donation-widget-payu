@@ -66,3 +66,9 @@ msgstr ""
 
 msgid "The minimum amount of support is PLN %s."
 msgstr ""
+
+msgid "Please configure '%s' option in donation plugin."
+msgstr ""
+
+msgid "Something went wrong. Please check donation plugin configuration."
+msgstr ""

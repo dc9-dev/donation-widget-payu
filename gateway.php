@@ -24,7 +24,8 @@ $keys = array_keys(\RealHero\DonationWidgetPayu\PayU\PayUSettings::SETTINGS);
 
 foreach ($keys as $k) {
     if (empty($config->{$k})) {
-        wp_die("Please configure `${k}` in donation plugin.");
+        $errorMsg = sprintf(__("Please configure '%s' option in donation plugin.", "donation-widget-payu"), $k);
+        wp_die($errorMsg);
     }
 }
 
@@ -58,7 +59,7 @@ $extOrderId = uniqid("order_") . rand(1, 9999);
 
 $order['continueUrl']       = get_site_url(null, $config->continueUrl);
 // $order['notifyUrl']  = 'http://localhost/';
-$order['customerIp']        = $_SERVER['REMOTE_ADDR'];
+$order['customerIp']        = \RealHero\DonationWidgetPayu\Helpers::getRealIp();
 $order['merchantPosId']     = OpenPayU_Configuration::getMerchantPosId();
 
 // This works like a transfer title 
@@ -78,6 +79,6 @@ try {
     if (\RealHero\DonationWidgetPayu\Helpers::isDebugOn()) {
         wp_die($e->getMessage());
     } else {
-        wp_die("Something went wrong. Please check plugin configuration.");
+        wp_die(__("Something went wrong. Please check donation plugin configuration.", "donation-widget-payu"));
     }
 }

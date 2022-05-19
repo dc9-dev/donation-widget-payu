@@ -6,7 +6,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-payu-donation-"
 "widget\n"
 "POT-Creation-Date: 2022-04-28 20:10+0200\n"
-"PO-Revision-Date: 2022-05-10 13:20+0200\n"
+"PO-Revision-Date: 2022-05-19 10:18+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pl_PL\n"
@@ -70,3 +70,9 @@ msgstr "Potwierdź płatność"
 
 msgid "The minimum amount of support is PLN %s."
 msgstr "Minimalna kwota wsparcia to %s PLN."
+
+msgid "Please configure '%s' option in donation plugin."
+msgstr "Musisz skonfigurować opcję '%s' aby plugin zadziałał."
+
+msgid "Something went wrong. Please check donation plugin configuration."
+msgstr "Coś poszło nie tak. Sprawdź konfigurację pluginu płatności."
