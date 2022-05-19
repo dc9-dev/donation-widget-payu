@@ -11,7 +11,7 @@ zip -r "${NAME}.zip" "./${NAME}" -x \
 "./${NAME}/package.json" \
 "./${NAME}/.eslintrc.js" \
 "./${NAME}/.editorconfig" \
-"./${NAME}/bundle.sh" \
+"./${NAME}/bundler.sh" \
 "./${NAME}/tests/*" \
 "./${NAME}/Gruntfile.js" \
 "./${NAME}/composer.json" \
