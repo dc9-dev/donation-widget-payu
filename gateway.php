@@ -72,6 +72,11 @@ $order['products'][0]['name'] = 'Donation: ' . $amount;
 $order['products'][0]['unitPrice'] = $realAmount;
 $order['products'][0]['quantity'] = 1;
 
+$order['buyer']['email'] = 'dd@ddd.pl';
+$order['buyer']['phone'] = '123123123';
+$order['buyer']['firstName'] = 'Jan';
+$order['buyer']['lastName'] = 'Kowalski';
+
 try {
     $response = OpenPayU_Order::create($order);
     header('Location:' . $response->getResponse()->redirectUri);
